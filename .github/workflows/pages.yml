@@ -1,0 +1,23 @@
+name: Setup pages
+on:
+  push:
+    branches:
+      - main
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dependencies.
+        run: |
+          sudo apt-get install -y pandoc
+
+      - name: Run the tool.
+        run: |
+          ./tool -r
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: .
