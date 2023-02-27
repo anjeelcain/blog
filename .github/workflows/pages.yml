@@ -13,6 +13,9 @@ jobs:
         run: |
           sudo apt-get install -y pandoc
 
+      - name: Change working directory
+        run: cd $GITHUB_WORKSPACE
+
       - name: Run the tool.
         run: |
           ./tool -r
