@@ -2,7 +2,7 @@ name: Setup pages
 on:
   push:
     branches:
-      - main
+      - master
 permissions:
   contents: write
 jobs:
