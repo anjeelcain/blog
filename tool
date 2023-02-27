@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/usr/bin/env sh -e
 
 prompt(){
     printf '%s\n\033[2J'
