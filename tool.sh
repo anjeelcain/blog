@@ -38,7 +38,6 @@ md2html(){
     for x in site/posts/*.md; do
         printf '%s\n' '[post] Indexing.'
         t=$(grep -m 1 -e '^title:' "$x" | sed 's/^title: //')
-        pandoc -s "$x" -o "${x%.md}.html"            
         echo "<a href=\"${x%.md}.html\">$t</a>" >> index.html
     done
 }
