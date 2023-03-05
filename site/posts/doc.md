@@ -2,8 +2,6 @@
 title: Example file
 ...
 
-# Lorem ipsum dolor sit amet.
-
 Lorem ipsum dolor sit amet. Sed aspernatur minus qui officia reprehenderit aut
 modi repellat ut maxime voluptatem est incidunt consequatur non veritatis vitae.
 Aut repellendus odit et ratione eveniet aut alias voluptatem sed perspiciatis
@@ -16,14 +14,14 @@ adipisci nam aperiam atque vel [mollitia tenetur](https://github.com/anjeelcain)
 
 --------------------------------
 
-<!-- vim-markdown-toc GFM -->
+![Image Example](../imgs/island.jpg)
+![Image Example](../imgs/snow.jpg)
 
-* [Example](#example)
-* [The quick brown fox](#the-quick-brown-fox)
-* [Example 2](#example-2)
-    * [Record](#record)
+--------------------------------
 
-<!-- vim-markdown-toc -->
+1. [Example](#example)
+2. [The quick brown fox](#the-quick-brown-fox)
+3. [Example 2](#example-2)
 
 --------------------------------
 

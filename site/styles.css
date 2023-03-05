@@ -51,7 +51,7 @@ h2 {
   margin: 1em 1ex 0.5ex 0; 
 }
 
-ol {
+ul, ol {
   padding-left: 15px;
 }
 

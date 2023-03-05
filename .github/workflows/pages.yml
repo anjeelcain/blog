@@ -21,7 +21,7 @@ jobs:
 
       - name: Run the tool.
         run: |
-          sh ./tool.sh -r
+          sh ./tool -r
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4

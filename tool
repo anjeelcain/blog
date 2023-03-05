@@ -1,4 +1,4 @@
-#!/usr/bin/env sh -e
+#!/bin/sh -e
 
 prompt(){
     printf '%s\n\033[2J'
@@ -19,7 +19,6 @@ post(){
         "$1".md "$USER" "$(date '+%A, %b %d, %Y')" > site/posts/"$1".md
 
     "${EDITOR:-vim}" site/posts/"$1".md
-    md2html "$1"
 }
 
 md2html(){
@@ -49,6 +48,7 @@ main(){
             exit 0 ;;
         "-r")
             md2html && rm -rf site/posts/*.md ;;
+        "-e") md2html ;;
         "-c")
             rm -rf site/posts/*.md ;;
         "-h")
