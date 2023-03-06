@@ -16,7 +16,7 @@ prompt(){
 
 post(){
     printf -- "---\ntitle: %s\nauthor: %s\ndate: %s\n...\n" \
-        "$1".md "$USER" "$(date '+%A, %b %d, %Y')" > site/posts/"$1".md
+        "$1".md "$USER" "$(date '+%d %b %Y')" > site/posts/"$1".md
 
     "${EDITOR:-vim}" site/posts/"$1".md
 }
@@ -37,7 +37,10 @@ md2html(){
     for x in site/posts/*.md; do
         printf '%s\n' '[post] Indexing.'
         t=$(grep -m 1 -e '^title:' "$x" | sed 's/^title: //')
-        echo "<a href=\"${x%.md}.html\">$t</a>" >> index.html
+        d=$(grep -m 1 -e '^date:' "$x" | sed 's/^date: //')
+        
+        printf '<tr>\n<td>%s</a></td>\n<td><a href="%s">%s</td>\n</tr>\n</body>\n</html>' \
+            "$d" ${x%.md}.html "$t" >> index.html
     done
 }
 

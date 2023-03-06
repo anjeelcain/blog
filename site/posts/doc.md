@@ -1,5 +1,6 @@
 ---
 title: Example file
+date: 06 Mar 2023
 ...
 
 Lorem ipsum dolor sit amet. Sed aspernatur minus qui officia reprehenderit aut
