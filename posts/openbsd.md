@@ -9,7 +9,6 @@ A few months ago I started using OpenBSD because the Linux kernel was quickly pr
 Why? Simplicity and security are some of the reasons why I chose it. OpenBSD follows the Unix philosophy and does not bloat the system with "pointless features" that open doors to several security flaws. Additionally, they perform line-by-line auditing, which contributes to the code being very clean. 
 
 Following the [OpenBSD installation guide](https://www.openbsd.org/faq/faq4.html), you will have a basic system installed on your machine. However, in this guide, I intend to show you some "dirty tricks" that I've learned and how to use OpenBSD as a desktop operating system.
-
 ![](https://user-images.githubusercontent.com/82726847/221463720-d93975eb-5ebd-435b-980b-30e033dad643.png)
 
 ----
