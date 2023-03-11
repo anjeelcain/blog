@@ -7,7 +7,7 @@ Lorem ipsum dolor sit amet. Sed aspernatur minus qui officia reprehenderit aut
 modi repellat ut maxime voluptatem est incidunt consequatur non veritatis vitae.
 Aut repellendus odit et ratione eveniet aut alias voluptatem sed perspiciatis
 adipisci quo ratione commodi ea nulla accusantium aut dolor enim. In rerum sint
-ut adipisci fugiat ea cumque eaque qui quaerat quam et nostrum enim.
+ut adipisci fugiat ea cumque eaque qui quaerat quam et nostrum enim.\
 
 Et veniam rerum est iste quisquam et obcaecati vitae nam fugit omnis non
 accusamus recusandae est similique voluptatem id mollitia voluptatem. Aut error
@@ -15,8 +15,8 @@ adipisci nam aperiam atque vel [mollitia tenetur](https://github.com/anjeelcain)
 
 --------------------------------
 
-![Image Example](../imgs/island.jpg)
-![Image Example](../imgs/snow.jpg)
+![Image Example](../media/island.jpg)
+![Image Example](../media/snow.jpg)
 
 --------------------------------
 
