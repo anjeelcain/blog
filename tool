@@ -3,10 +3,10 @@
 prompt(){
     printf '%s\n\033[2J'
 
-    if [ -e site/posts/"$1".md ]; then
+    if [ -e posts/"$1".md ]; then
         printf '\nPost already exists. Edit post instead? [y/n]: '; read -r as
         case "$as" in
-            y) "${EDITOR:-vim}" site/posts/"$1".md ;;
+            y) "${EDITOR:-vim}" posts/"$1".md ;;
             *) post "$1"
         esac
     else
@@ -16,25 +16,25 @@ prompt(){
 
 post(){
     printf -- "---\ntitle: %s\nauthor: %s\ndate: %s\n...\n" \
-        "$1".md "$USER" "$(date '+%d %b %Y')" > site/posts/"$1".md
+        "$1".md "$USER" "$(date '+%d %b %Y')" > posts/"$1".md
 
-    "${EDITOR:-vim}" site/posts/"$1".md
+    "${EDITOR:-vim}" posts/"$1".md
 }
 
 md2html(){
     # Grab the title from the file.
-    t=$(grep -m 1 -e '^title:' site/posts/"$1".md | sed 's/^title: //')
+    t=$(grep -m 1 -e '^title:' posts/"$1".md | sed 's/^title: //')
     # Clear the screen.
     printf '%s\n\033[2J'
 
     # Markdown to HTML
-    for i in site/posts/*.md; do
+    for i in posts/*.md; do
         printf '%s\n' '[post] MD2HTML.'
-        pandoc --template site/template.html "$i" -o "${i%.md}.html"
+        pandoc --template template.html "$i" -o "${i%.md}.html"
     done
 
     # List the posts on main page.
-    for x in site/posts/*.md; do
+    for x in posts/*.md; do
         printf '%s\n' '[post] Indexing.'
         t=$(grep -m 1 -e '^title:' "$x" | sed 's/^title: //')
         d=$(grep -m 1 -e '^date:' "$x" | sed 's/^date: //')
@@ -50,10 +50,10 @@ main(){
             printf '%s\n' 'Usage: tool [filename]' 
             exit 0 ;;
         "-r")
-            md2html && rm -rf site/posts/*.md ;;
+            md2html && rm -rf posts/*.md ;;
         "-e") md2html ;;
         "-c")
-            rm -rf site/posts/*.md ;;
+            rm -rf posts/*.md ;;
         "-h")
             printf '-r remove original posts files\n'
             printf '-c remove all posts\n-h show help\n'
