@@ -4,6 +4,8 @@ body {
   max-width: 75ch;
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji"; 
   font-size: 16px;
+  background-color: #fff;
+  color: #000;
 }
 
 h1 {
@@ -46,3 +48,23 @@ ul, ol {
 .shell {
   padding: 1em;
 }
+
+@media (prefers-color-scheme: dark) {
+
+body {
+  background-color: #000;
+  color: #bdbdbd;
+}
+
+a {
+  color: #56c8ff;
+}
+
+hr { 
+  border-top: 1px solid #5f6368;
+}
+
+pre { 
+  border: 1px solid #5f6368;
+  background: #000;
+} 
